@@ -5,11 +5,13 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:kurumbar/backend/GoRouter/navigator.dart';
 import 'package:kurumbar/backend/providers/app_locale_provider.dart';
+import 'package:kurumbar/backend/providers/auth_provider.dart';
 import 'package:kurumbar/l10n/app_localizations.dart';
 import 'package:kurumbar/utils/design_system.dart';
 
 List<SingleChildWidget> buildRootProviders() => <SingleChildWidget>[
   ChangeNotifierProvider<AppLocaleProvider>(create: (_) => AppLocaleProvider()),
+  ChangeNotifierProvider<AuthProvider>(create: (_) => AuthProvider()),
 ];
 
 Future<void> main() async {
