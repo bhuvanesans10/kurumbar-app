@@ -76,7 +76,7 @@ class _MatrimonyPageState extends State<MatrimonyPage> {
       backgroundColor: KurumbarDesignSystem.background,
       appBar: AppBar(
         title: Text(
-          isTa ? 'குரும்பர் வரன் தேடல்' : 'Kurumbar Matrimony',
+          isTa ? 'குறும்பர் வரன் தேடல்' : 'Kurumbar Matrimony',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,

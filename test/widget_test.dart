@@ -164,7 +164,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify Tamil localized header
-    expect(find.text('குரும்பர் சமுதாயம்'), findsWidgets);
+    expect(find.text('குறும்பர் சமுதாயம்'), findsWidgets);
     expect(find.text('English'), findsOneWidget);
   });
 }

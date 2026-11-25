@@ -15,7 +15,7 @@ class AuthProvider extends ChangeNotifier {
     'constituency': 'அந்தியூர் (Anthiyur)',
     'bloodGroup': 'O+',
     'dob': '12/10/1996',
-    'avatarUrl': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+    'avatarUrl': 'assets/images/member_avatar.png',
     'isVerified': true,
     'issuedDate': '24/11/2026',
     'validUntil': 'வாழ்நாள் உறுப்பினர் (Lifetime)',

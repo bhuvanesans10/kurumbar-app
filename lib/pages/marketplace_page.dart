@@ -72,7 +72,7 @@ class _MarketplacePageState extends State<MarketplacePage> {
       backgroundColor: KurumbarDesignSystem.background,
       appBar: AppBar(
         title: Text(
-          isTa ? 'குரும்பர் சந்தை & வேலைவாய்ப்பு' : 'Marketplace & Jobs',
+          isTa ? 'குறும்பர் சந்தை & வேலைவாய்ப்பு' : 'Marketplace & Jobs',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,

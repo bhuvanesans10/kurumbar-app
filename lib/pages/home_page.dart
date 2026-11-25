@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    isTa ? 'குரும்பர் சமுதாயம்' : 'Kurumbar Community',
+                    isTa ? 'குறும்பர் சமுதாயம்' : 'Kurumbar Community',
                     style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 16,
@@ -271,7 +271,9 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.white, width: 2),
                           image: DecorationImage(
-                            image: NetworkImage(member['avatarUrl']),
+                            image: member['avatarUrl'].toString().startsWith('assets/')
+                                ? AssetImage(member['avatarUrl']) as ImageProvider
+                                : NetworkImage(member['avatarUrl']),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -408,7 +410,7 @@ class _HomePageState extends State<HomePage> {
                 _serviceTile(
                   icon: Icons.favorite_outline,
                   color: const Color(0xFFE11D48),
-                  label: isTa ? 'குரும்பர்\nவரன்' : 'Kurumbar\nMatrimony',
+                  label: isTa ? 'குறும்பர்\nவரன்' : 'Kurumbar\nMatrimony',
                   onTap: () => setState(() => _currentIndex = 2),
                 ),
                 _serviceTile(
@@ -511,7 +513,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const Divider(height: 20),
                   _newsItem(
-                    title: 'தமிழ்நாடு குரும்பர் சமுதாய மாநில மாநாடு - 2026',
+                    title: 'தமிழ்நாடு குறும்பர் சமுதாய மாநில மாநாடு - 2026',
                     date: '28 நவம்பர் 2026 • சேலம்',
                     tag: 'மாநாடு',
                   ),
@@ -556,7 +558,9 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   CircleAvatar(
                     radius: 46,
-                    backgroundImage: NetworkImage(member['avatarUrl']),
+                    backgroundImage: member['avatarUrl'].toString().startsWith('assets/')
+                        ? AssetImage(member['avatarUrl']) as ImageProvider
+                        : NetworkImage(member['avatarUrl']),
                   ),
                   Positioned(
                     bottom: 0,

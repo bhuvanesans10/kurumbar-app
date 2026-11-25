@@ -219,7 +219,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     Expanded(
                       child: Text(
                         isTa
-                            ? 'அனைத்து விவரங்களும் தமிழ்நாடு குரும்பர் சங்க விதிமுறைகளின்படி சரிபார்க்கப்படும்.'
+                            ? 'அனைத்து விவரங்களும் தமிழ்நாடு குறும்பர் சங்க விதிமுறைகளின்படி சரிபார்க்கப்படும்.'
                             : 'Details verified per TN Kurumbar Community bylaws.',
                         style: const TextStyle(
                           fontSize: 12,

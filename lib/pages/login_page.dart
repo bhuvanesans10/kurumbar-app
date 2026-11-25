@@ -148,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
               // Title
               Text(
                 isTa
-                    ? 'குரும்பர் சமுதாய அதிகாரப்பூர்வ செயலி'
+                    ? 'குறும்பர் சமுதாய அதிகாரப்பூர்வ செயலி'
                     : 'Kurumbar Community Official Mobile App',
                 textAlign: TextAlign.center,
                 style: const TextStyle(

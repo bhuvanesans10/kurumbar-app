@@ -248,7 +248,7 @@ class _DigitalIdPageState extends State<DigitalIdPage>
                             ),
                             Text(
                               isTa
-                                  ? 'தமிழ்நாடு குரும்பர் சமுதாய நல வாரியம்'
+                                  ? 'தமிழ்நாடு குறும்பர் சமுதாய நல வாரியம்'
                                   : 'Tamil Nadu Kurumbar Welfare Board',
                               style: const TextStyle(
                                 fontSize: 12,
@@ -338,7 +338,7 @@ class _DigitalIdPageState extends State<DigitalIdPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'தமிழ்நாடு குரும்பர் சங்கம்',
+                        'தமிழ்நாடு குறும்பர் சங்கம்',
                         style: TextStyle(
                           color: KurumbarDesignSystem.accentYellow,
                           fontWeight: FontWeight.w800,
@@ -397,7 +397,9 @@ class _DigitalIdPageState extends State<DigitalIdPage>
                           width: 2,
                         ),
                         image: DecorationImage(
-                          image: NetworkImage(m['avatarUrl']),
+                          image: m['avatarUrl'].toString().startsWith('assets/')
+                              ? AssetImage(m['avatarUrl']) as ImageProvider
+                              : NetworkImage(m['avatarUrl']),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -583,7 +585,7 @@ class _DigitalIdPageState extends State<DigitalIdPage>
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  '1. இந்த அடையாள அட்டை குரும்பர் சமூக உறுப்பினருக்கு மட்டுமே உரியது.',
+                  '1. இந்த அடையாள அட்டை குறும்பர் சமூக உறுப்பினருக்கு மட்டுமே உரியது.',
                   style: TextStyle(
                     fontSize: 10,
                     color: KurumbarDesignSystem.textSecondary,
