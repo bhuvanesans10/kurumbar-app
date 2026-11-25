@@ -20,10 +20,24 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        ndk {
+            abiFilters.addAll(listOf("arm64-v8a"))
+        }
+    }
+
+    signingConfigs {
+        getByName("debug") {
+            // Inherits debug keystore
+        }
     }
 
     buildTypes {
-        release {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
+        getByName("debug") {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
